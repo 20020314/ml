@@ -23,7 +23,7 @@ KyLogo='
                                                 
 ☆-破解By：十一     
 
-☆-博客地址：blog.67cc.cn
+☆-博客地址：chaikair.cc
 =====================================================';
 YzError='
 =====================================================  
@@ -318,13 +318,6 @@ systemctl stop mariadb.service >/dev/null 2>&1
 systemctl stop openvpn@server-*.service >/dev/null 2>&1  
 yum remove -y openvpn httpd mariadb-server mariadb >/dev/null 2>&1 
 yum remove -y php php-mysql php-gd libjpeg* php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-bcmath php-mhash php-fpm >/dev/null 2>&1
-echo && echo -e "正在更换安装源..."
-if [[ $fwq != '阿里云'  ||  $fwq != '腾讯云'  ||  $fwq != '小鸟云' ]];then
-  mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
-  wget -q -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-  yum clean all >/dev/null 2>&1
-  yum makecache >/dev/null 2>&1  
-fi
 yum -y install unzip tar expect epel-release >/dev/null 2>&1
 rm -rf /etc/sysctl.conf
 echo "# 解决微信QQ卡顿问题
@@ -519,9 +512,9 @@ if [[ $Ksq2 == *黑名单* ]];then
 fi
 echo -e "\033[36m$KyLogo\033[0m"
 echo
-echo -n -e "请输入博客地址：[\033[32m blog.67cc.cn\033[0m ]："
+echo -n -e "请输入博客地址：[\033[32m chaikair.cc\033[0m ]："
 read key
-if [[ $key == 'blog.67cc.cn' ]]
+if [[ $key == 'chaikair.cc' ]]
 then
 	echo
 	dizhi=`echo $localserver|awk '{print $3}'`
